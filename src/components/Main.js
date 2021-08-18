@@ -18,14 +18,19 @@
 //tag or filter buttons end
 function Main({ children }) {
     return (
+        <>
         <div>
-            <button className="vegan" />
-            <button className="vegetarian" />
-            <button className="omnivourus" />
-            <button className="starter" />
-            <button className="main" />
-            <button className="smoothie" />
+            <button className="vegan"></button >
+            <button className="vegetarian"></button>
+            <button className="omnivourus" > </button>
+            <button className="starter" ></button>
+            <button className="main"></button>
+            <button className="smoothie" ></button>
         </div>
+        <div className="posts">
+
+        </div>
+        </>
     );
 }
 

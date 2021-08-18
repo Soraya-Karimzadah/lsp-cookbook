@@ -1,7 +1,7 @@
 import marked from "marked";
 
 export const Post = ({ article }) => {
-  const { name, featuredImage, description } = article.fields;
+  const { name, featuredImage, description, ingredients } = article.fields;
   const postDescription = marked(description);
   return (
     <div className="post">
@@ -15,6 +15,7 @@ export const Post = ({ article }) => {
         />
       )}
       <section dangerouslySetInnerHTML={{ __html: postDescription }} />
+      <section dangerouslySetInnerHTML={{ __html: postIngredients }} />
     </div>
   );
 };
