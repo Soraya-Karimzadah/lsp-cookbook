@@ -1,18 +1,20 @@
-import 
+import marked from "marked";
 
-
-
-
-
-// single recipe page
-
-const Recipe = ({ article }) => {
-    const { name, featuredImage, description, ingridients} = article.fields;
-    const postDescription = selected(description);
-    return (
-        <div className="recipe">
-            <h3 className="name">{name}</h3>
-        
-        </div>
-    );
+export const Post = ({ article }) => {
+  const { name, featuredImage, description } = article.fields;
+  const postDescription = marked(description);
+  return (
+    <div className="post">
+      <h2 className="title">{name}</h2>
+      {featuredImage && (
+        <img
+          className="featuredImage"
+          src={featuredImage.fields.file.url}
+          alt={name}
+          title={name}
+        />
+      )}
+      <section dangerouslySetInnerHTML={{ __html: postDescription }} />
+    </div>
+  );
 };
