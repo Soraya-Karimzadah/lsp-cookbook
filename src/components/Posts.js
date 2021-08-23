@@ -1,5 +1,21 @@
+import React from 'react';
+import { Post } from "./Post";
+import Recipe from "./Recipe";
 
-import React from 'react'
+export const Posts = ({ posts }) => {
+  console.log(posts);
+
+  return (
+    <div>
+      {posts.map((article, index) => (
+        <Post article={article} key={index} />
+      ))}
+    </div>
+  );
+};
+
+
+
 
 export default function Posts({posts}) {
     return (
@@ -7,10 +23,11 @@ export default function Posts({posts}) {
            <h2>{item.fields.name} </h2> )}
             
         </div>
-    )
+    );
 }
 
-import Recipe from "./Recipe";
+
+
 
 
 
