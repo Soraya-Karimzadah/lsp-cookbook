@@ -3,10 +3,11 @@ import {useState, useEffect} from 'react';
 import './App.css';
 import { client } from './client';
 import Posts from './components/Posts';
-
+import Header from './components/Header';
+import Main from './components/Main';
+import Footer from './components/Footer';
 
 function App() {
-
   const [articles, setArticles] = useState([])
 
 useEffect(() => {
@@ -24,7 +25,7 @@ useEffect(() => {
 
 
 
-
+/*
   return (
     <div className="App">
      <div className="container">
@@ -41,6 +42,13 @@ useEffect(() => {
        </main> 
          </div>
       
+*/
+
+  return (
+    <div className="App">
+      <Header />
+      <Main />
+      <Footer />
     </div>
   );
 }

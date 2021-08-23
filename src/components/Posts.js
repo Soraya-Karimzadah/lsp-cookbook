@@ -1,3 +1,4 @@
+
 import React from 'react'
 
 export default function Posts({posts}) {
@@ -8,3 +9,19 @@ export default function Posts({posts}) {
         </div>
     )
 }
+
+import Recipe from "./Recipe";
+
+
+
+
+
+
+
+
+
+
+
+
+
+
